@@ -80,6 +80,12 @@ public class CreationOfEmployee {
 		Select dropdown5 = new Select(findElementById5);
 		dropdown5.selectByIndex(1);
 		
+		WebElement findElementById6 = driver.findElementById("createLeadForm_generalCountryGeoId");
+		Select dropdown6 = new Select(findElementById6);
+		dropdown6.selectByVisibleText("India");
+		
+		driver.findElementById("createLeadForm_primaryPhoneCountryCode").clear();
+		
 		driver.findElementById("createLeadForm_primaryPhoneCountryCode").sendKeys("+91");
 		
 		driver.findElementById("createLeadForm_primaryPhoneNumber").sendKeys("8072514199");
@@ -98,14 +104,14 @@ public class CreationOfEmployee {
 		
 		driver.findElementById("createLeadForm_generalCity").sendKeys("Karaikudi");
 		
-		driver.findElementById("createLeadForm_generalStateProvinceGeoId").sendKeys("Tamil Nadu");
-
+		
 		driver.findElementById("createLeadForm_generalPostalCode").sendKeys("630 106");
 		
-		WebElement findElementById6 = driver.findElementById("createLeadForm_generalCountryGeoId");
-		Select dropdown6 = new Select(findElementById6);
-		dropdown6.selectByVisibleText("India");
+		WebElement findElementById7 = driver.findElementById("createLeadForm_generalStateProvinceGeoId");
+		Select dropdown7 = new Select(findElementById7);
+		dropdown7.selectByValue("IN-TN");
 		
+					
 		driver.findElementByClassName("smallSubmit").click();
 		
 		driver.findElementByLinkText("Duplicate Lead").click();
